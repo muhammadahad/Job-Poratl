@@ -1,0 +1,45 @@
+﻿@model Ahad_Project.Models.Interview
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div class="message row  shadow p-5  mb-4 bg-white" style="height:100%; width:50%; margin:auto;">
+    <h4>Interview</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InterviewerOneNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InterviewerOneNavigation.Contact)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InterviewerThreeNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InterviewerThreeNavigation.Contact)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.InterviewerTwoNavigation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.InterviewerTwoNavigation.Contact)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Vac)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Vac.Id)
+        </dd>
+    </dl>
+
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+</div>

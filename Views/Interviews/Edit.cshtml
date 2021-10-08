@@ -1,0 +1,47 @@
+﻿@model Ahad_Project.Models.Interview
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>Interview</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="VacId" class="control-label"></label>
+                <select asp-for="VacId" class="form-control" asp-items="ViewBag.VacId"></select>
+                <span asp-validation-for="VacId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InterviewerOne" class="control-label"></label>
+                <select asp-for="InterviewerOne" class="form-control" asp-items="ViewBag.InterviewerOne"></select>
+                <span asp-validation-for="InterviewerOne" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InterviewerTwo" class="control-label"></label>
+                <select asp-for="InterviewerTwo" class="form-control" asp-items="ViewBag.InterviewerTwo"></select>
+                <span asp-validation-for="InterviewerTwo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InterviewerThree" class="control-label"></label>
+                <select asp-for="InterviewerThree" class="form-control" asp-items="ViewBag.InterviewerThree"></select>
+                <span asp-validation-for="InterviewerThree" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -1,0 +1,50 @@
+﻿@model Ahad_Project.Models.Applicant
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="message shadow p-2 mb-4 mt-5 bg-white"><h2>Apply Now</h2></div>
+<hr />
+<div class="Compose" style="height:auto; width:50%; margin:auto;">
+
+    <div class=" shadow p-5  mb-4 bg-white" style="border-radius: 20px;">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Contact" class="control-label"></label>
+                    <input asp-for="Contact" class="form-control" />
+                    <span asp-validation-for="Contact" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="UploadFile" class="control-label"></label>
+                    <input type="file" asp-for="UploadFile" class="form-control-file" id="exampleFormControlFile1">
+                    <span asp-validation-for="UploadFile" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-12">
+                    <button type="submit" class="btn btn-warning btn-lg w-100" style="border-radius: 10px; color: white;">Apply</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+
